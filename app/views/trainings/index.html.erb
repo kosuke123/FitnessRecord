@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag 'trainings', :media => "all" %>
+
+<div class="tr">
+  <div class="trainings-container">
+    <h1>トレーニング一覧</h1>
+        <% @trainings.each do |t| %>
+          <div class="training">
+            <div class="main-box">
+                <div class="left-container"> 
+                  <%= t.user.username %>
+                  <%= t.user.email %>
+                  <%= link_to(t.body,"/trainings/#{t.id}") %>
+                  <%= t.howmany %>回
+                  <%= t.howmanysets %>セット
+                  <%= t.created_at %>
+                </div>
+                <div class="right-container">
+                  <%= link_to "マイページ", users_show_path(t.user_id), class: "link-to" %>
+                  <%= link_to "詳細へ", training_path(t.id), class: "link-to" %>
+                  <%= link_to "編集する", edit_training_path(t.id), class: "link-to" %>
+                  <%= link_to "削除する", training_path(t.id), method: :delete, class: "link-to" %>
+                </div>
+            </div>
+
+            <div class="image">
+              <%= image_tag t.image_url if t.image? %>
+            </div>
+            
+            <div>  
+              (♡<%= t.liked_users.count %>)
+            </div>
+            
+            <p class="time">
+              <%= t.created_at %>
+            </p>
+            
+          </div>
+        <% end %>
+  </div>
+</div>  

@@ -1,0 +1,19 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">アカウント編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+      
+        <div class="field">
+        <%= f.label :image %>
+        <br>
+        <%= f.file_field :image %>
+        </div>
+      </div>
+    </div>
+  </div>

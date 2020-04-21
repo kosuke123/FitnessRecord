@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'kinds', :media => "all" %>
+<div class="k">
+  <div class="kinds-container">
+    <h1>部位ごとトレーニング記録一覧</h1>
+      <% @trainings.each do |t| %>
+        <div class="kind">
+          <div class= "main-box">
+            <%= t.user.username %>
+            <%= t.user.email %>
+            <%= t.body %>
+            <strong><p><%= t.body %></p></strong>
+            <strong><p><%= t.howmany %>回</p></strong>
+            <strong><p><%= t.howmanysets %>セット</p></strong>
+            <%= t.created_at %>
+            <%= image_tag t.image_url if t.image? %>
+          </div>
+        </div> 
+      <% end %>
+    </div>
+  </div>
+</div>

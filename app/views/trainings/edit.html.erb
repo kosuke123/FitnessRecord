@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'trainings', :media => "all" %>
+<div class="edit-container">
+  <div class="edit">
+    <%= form_for @training do |f| %>
+      <div class="field">
+      
+      <h2>トレーニング部位</h2>
+      <%= f.select :kind_id, Kind.all.map{|k| [k.body, k.id]}, :prompt => '選択してください' %>
+      <br>
+      <h2>トレーニング回数</h2>
+      <%= f.text_field :howmany, :size => 10 %>回
+      <h2>トレーニングセット数</h2>
+      <%= f.text_field :howmanysets, :size => 10 %>セット
+      <br>
+      <h2>トレーニング名</h2>
+      <%= f.text_field :body, :size => 140 %>
+      <br>
+      <%= f.submit "編集する" %>
+      </div>
+      <% end %>
+  </div>
+</div>

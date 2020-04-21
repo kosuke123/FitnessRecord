@@ -1,0 +1,26 @@
+.k {
+  background: linear-gradient(90deg, rgba(54, 83, 156, 0.6), rgba(77, 76, 167, 0.9)) ,url(e812800a0ae9ea297878802795ba4753.jpg);
+  background-repeat: no-repeat;    
+  background-size: cover;  
+  background-attachment: fixed;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 150px;
+}
+.kinds-container {
+    width: 60%;
+    margin: 10px auto;
+}
+.kind {
+    border-top: solid #00acee;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+.main-box {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

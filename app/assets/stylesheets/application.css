@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  }
+  header {
+    background-color: black;
+    background-image: url(unnamed.jpg);
+    background-repeat: no-repeat;  
+    background-position: 35% 10%;
+    height: 100px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header a {
+    color: white; 
+    text-decoration: none; 
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+    margin-left: 600px;
+  }
+  header ul {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+  footer {
+    color: white;
+    height: 30px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    background-color: white;
+  }
+  .flash {
+    padding: 10px 0;
+    color: white;
+    background: rgb(113, 66, 189);
+    text-align: center;
+    position: relative;
+    /* top: 64px; */
+    z-index: 10;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .link-to {
+    color: rgb(241, 209, 26);
+  }

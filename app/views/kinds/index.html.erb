@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag 'kinds', :media => "all" %>
+
+<div class="k">
+  <div class="kinds-container">
+    <h1>部位ごとトレーニング記録一覧</h1>
+      <% @kind.each do |t| %>
+      <div class="kind">
+        <div class="main-box">
+          <strong><h2><%= t.body %></h2></strong>
+          <%= link_to "詳細へ", kinds_path(t.id), class: "link-to" %>
+        </div>
+      </div> 
+      <% end %>
+  </div>  
+</div>

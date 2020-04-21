@@ -1,0 +1,82 @@
+.tr {
+  padding-top: 400px;
+  background: linear-gradient(90deg, rgba(107, 119, 150, 0.6), rgba(92, 90, 138, 0.9)) ,url(8d18ceac7922f65454deb807651b7c2e.jpg);
+  background-repeat: no-repeat;    
+  background-size: cover;  
+  background-attachment: fixed;
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+.tra {
+  padding-top: 50px;
+  background: linear-gradient(90deg, rgba(54, 83, 156, 0.6), rgba(77, 76, 167, 0.9)) ,url(image4.jpg);
+  background-repeat: no-repeat;    
+  background-size: cover;  
+  color: white;
+}
+.tra-container {
+  width: 60%;
+  margin: 10px auto;
+}
+.train-container {
+  width: 60%;
+  margin: 10px auto;
+}
+.train {
+  background: linear-gradient(90deg, rgba(54, 83, 156, 0.6), rgba(88, 103, 235, 0.9)) ,url(image4.jpg);
+  background-repeat: no-repeat;    
+  background-size: cover;  
+  background-attachment: fixed;
+  color: white;
+  padding-bottom: 220px;
+  padding-top: 30px;
+}
+.edit {
+  width: 60%;
+  margin: 10px auto;
+}
+.edit-container {
+  background: linear-gradient(90deg, rgba(54, 83, 156, 0.6), rgba(88, 103, 235, 0.9)) ,url(3966_ext_01_0.jpg);
+  background-repeat: no-repeat;    
+  background-size: cover;  
+  background-attachment: fixed;
+  color: white;
+  padding-bottom: 250px;
+  padding-top: 10px;
+}
+a {
+  color: green($color: #000000);
+  text-decoration: none;
+}
+.trainings-container {
+    width: 60%;
+    margin: 10px auto;
+  }
+  h3 {
+    margin-bottom: 30px;
+  }
+  .training {
+    border-top: solid #00acee;
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+  .main-box {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .image{
+    img{
+      width: 400px;
+      height: 300px;
+      display: block;
+    }  
+    margin: 40px;
+    object-fit: contain;
+    max-width: 100%;
+  }
+  .time {
+    display: flex;
+    justify-content: flex-end;
+  }

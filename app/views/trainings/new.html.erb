@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag 'trainings', :media => "all" %>
+
+<div class="tra">
+  <div class="tra-container">
+    <h1>新規Training</h1>
+    <%= form_for(@training, :url => { controller:'trainings', action:'create'}) do |f| %> 
+      
+      <h3>画像投稿ページ
+      <div class="field">
+        <%= f.label :image %>
+        <br>
+        <%= f.file_field :image %>
+      </div>
+      </h3>
+
+      <div class="field">
+        <%= f.label :body %>
+        <br>
+        <h2>トレーニング部位</h2>
+        <%= f.select :kind_id, Kind.all.map{|k| [k.body, k.id]}, :prompt => '選択してください' %>
+        <br>
+        <h2>トレーニング回数</h2>
+        <%= f.text_field :howmany, :size => 10 %>回
+        <h2>トレーニングセット数</h2>
+        <%= f.text_field :howmanysets, :size => 10 %>セット
+        <br>
+        <h2>トレーニング名</h2>
+        <%= f.text_field :body, :size => 140 %>
+        <br>
+        <%= f.submit "記録する" %>
+      </div>
+
+    <% end %>
+    <%= link_to "記録一覧に戻る", trainings_path, class: "link-to" %>
+  </div>
+</div>

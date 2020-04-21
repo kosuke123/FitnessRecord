@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fitnessrecord</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= Gon::Base.render_data %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1><font color="purple">F</font>itness<font color="purple">R</font>ecord<font color="purple"><i class="fas fa-dumbbell"></i></font></h1>
+      <div class="header-list">
+        <ul>
+            <li><%= link_to "トップ", trainings_path %></li>
+            <li><%= link_to "新規投稿へ", new_training_path %></li>
+
+            <li><% if user_signed_in? %>
+              <%= link_to "マイページ", users_show_path(current_user.id) %>
+            <% end %></li>
+            
+            <li><%= link_to "トレーニング一覧", kinds_index_path %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %><li>
+        </ul>
+      </div>
+    </header>
+    
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <main>
+      <%= yield %>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </main>
+   <footer>
+    <p>Copyright2020 © KosukeSato All Rights Reserved.</p>
+   </footer>
+  </body>
+</html>
