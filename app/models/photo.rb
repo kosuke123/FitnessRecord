@@ -1,3 +1,3 @@
 class Photo < ApplicationRecord
-    mount_uploader :image, ImageUploader   <!-- 記載するのはこれ！ -->
+    mount_uploader :image, ImageUploader  
   end
