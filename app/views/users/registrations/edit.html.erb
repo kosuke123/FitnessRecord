@@ -50,15 +50,48 @@
         <%= f.label :現在のパスワード %> <i>（変更を反映するのにパスワードの確認が必要です）</i><br />
         <%= f.password_field :current_password, autocomplete: "current-password" %>
       </div>
-
+      <br>
       <div class="actions">
-        <%= f.submit "変更する" %>
+        <%= f.submit "変更する", class: "bts" %>
       </div>
     <% end %>
       <br>
     <h3>アカウントを削除する</h3>
-    <%= button_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+    <%= button_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "bts" %>
 
     <%= link_to "Back", :back %>
   </div>
 </div>
+
+
+<div class="inputWithIcon">
+  <input type="text" placeholder="Your name">
+  <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+</div>
+
+<div class="inputWithIcon">
+  <input type="text" placeholder="Email">
+  <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+</div>
+
+<div class="inputWithIcon">
+  <input type="text" placeholder="Phone Number">
+  <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+</div>
+
+<div class="inputWithIcon inputIconBg">
+  <input type="text" placeholder="Your name">
+  <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+</div>
+
+<div class="inputWithIcon inputIconBg">
+  <input type="text" placeholder="Email">
+  <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+</div>
+
+<div class="inputWithIcon inputIconBg">
+  <input type="text" placeholder="Phone Number">
+  <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+</div>
+
+<input type="text" placeholder="Age">

@@ -20,7 +20,7 @@ class TrainingsController < ApplicationController
 
     if @training.save!
       redirect_to :action => "index"
-      flash[:notice] = "Nice Training!!"
+      flash[:notice] = "Good Training!!"
 
     else
       redirect_to :action => "new"
@@ -43,7 +43,7 @@ class TrainingsController < ApplicationController
     @trainings.body = params[:body]
     if @trainings.save
       redirect_to :action => "show", :id => @trainings.id
-      flash[:notice] = "Edited Training"
+      flash[:notice] = "Training edited"
     else
       render("trainings/new")
       # redirect_to :action => "new"
@@ -52,7 +52,7 @@ class TrainingsController < ApplicationController
 
   def destroy
     Training.find(params[:id]).destroy
-    flash[:notice] = "Deleted Training"
+    flash[:notice] = "Training deleted"
     redirect_to action: :index
   end
 

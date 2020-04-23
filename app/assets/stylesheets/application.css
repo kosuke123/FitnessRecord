@@ -3,8 +3,12 @@
     margin: 0;
   }
   body {
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
-      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: 'Patua One', cursive;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  main {
+    font-family: 'Patua One', cursive;
+    font-family: 'Noto Sans JP', sans-serif;
   }
   header {
     background-color: black;
@@ -25,7 +29,7 @@
   header h1 {
     color: white;
     margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
   }
   .header-list {
     display: flex;
@@ -66,8 +70,11 @@
     width: 100%;
     border-radius: 0 0 2px 2px;
     font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Patua One', cursive;
   }
   .link-to {
     color: rgb(241, 209, 26);
+  }
+  .link-to-content {
+    color: white;
   }

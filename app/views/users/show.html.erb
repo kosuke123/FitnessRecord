@@ -12,10 +12,6 @@
         <div class="user">
           <h2><%= @user.username %></h2>
         </div>
-
-        <div class="em">
-          <%= @user.email %>
-        </div>
       </div>
     </div>
 
@@ -34,12 +30,11 @@
       <div class="training">
         <div class="main-box">
           <div class="left-container">
-            <%= image_tag t.image_url if t.image? %>  
-            <%= t.user.email %>
+            <%= image_tag t.image_url if t.image? %> 
             <strong><p><%= t.body %></p></strong>
             <strong><p><%= t.howmany %>回</p></strong>
             <strong><p><%= t.howmanysets %>セット</p></strong>
-            <%= t.created_at %>
+            <%= t.created_at.to_s(:datetime_jp) %>
           </div>  
           <div class="image">
             <%= image_tag t.image_url if t.image? %>

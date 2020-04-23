@@ -99,7 +99,6 @@ h3 {
   background-size: cover;  
   background-attachment: fixed;
   color: white; 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding-top: 70px;
 }
 .backgroundcolor-text {
@@ -137,16 +136,44 @@ h3 {
 //   -webkit-transition: all .3s;
 //   transition: all .3s;
 // }
+// .pro {
+//   padding: 0.5em 1em;
+//   margin: 2em 0;
+//   color: white;
+//   background: linear-gradient(90deg, rgba(204, 58, 58, 0), rgba(118, 180, 81, 0.6));
+// }
+// .pro p {
+//   margin: 0; 
+//   padding: 0;
+// }
 .pro {
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  color: white;
-  background: linear-gradient(90deg, rgba(204, 58, 58, 0), rgba(118, 180, 81, 0.6));
-  // background: linear-gradient(90deg, rgba(144, 153, 63, 0.6), rgba(144, 153, 63, 0.6));
+  position: relative;
+  margin: 2em 0 2em 40px;
+  padding: 8px 15px;
+  background: #fff0c6;
+  border-radius: 30px;
+  color: black;
 }
 .pro p {
   margin: 0; 
   padding: 0;
+}
+.pro:before{font-family: FontAwesome;
+  content: "\f111";
+  position: absolute;
+  font-size: 15px;
+  left: -40px;
+  bottom: 0;
+  color: #fff0c6;
+}
+.pro:after{
+  font-family: FontAwesome;
+  content: "\f111";
+  position: absolute;
+  font-size: 23px;
+  left: -23px;
+  bottom: 0;
+  color: #fff0c6;
 }
 .pro-edit {
   background: linear-gradient(90deg, rgba(204, 58, 58, 0), rgba(204, 58, 58, 0)) ,url(S__12042246.jpg);
@@ -154,11 +181,60 @@ h3 {
   background-size: cover;  
   background-attachment: fixed;
   color: white; 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding-top: 70px;
 }
 .pro-edit-text {
   width: 60%;
   margin: 10px auto;
   padding-bottom: 150px;
+}
+
+#できるかなあ
+input[type="text"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon input[type="text"] {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
 }

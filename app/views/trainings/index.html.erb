@@ -7,12 +7,14 @@
           <div class="training">
             <div class="main-box">
                 <div class="left-container"> 
-                  <%= t.user.username %>
-                  <%= t.user.email %>
-                  <%= link_to(t.body,"/trainings/#{t.id}") %>
-                  <%= t.howmany %>回
-                  <%= t.howmanysets %>セット
-                  <%= t.created_at %>
+                    <div class="image-name">
+                      <div class="image-top">  
+                        <%= image_tag t.user.image_url if t.user.image? %>
+                      </div>  
+                      <div class="name-top">
+                        <%= t.user.username %>
+                      </div>
+                    </div>
                 </div>
                 <div class="right-container">
                   <%= link_to "マイページ", users_show_path(t.user_id), class: "link-to" %>
@@ -22,16 +24,22 @@
                 </div>
             </div>
 
+            <div class="content">
+              <%= link_to(t.body,"/trainings/#{t.id}")  %>
+              <%= t.howmany %>回
+              <%= t.howmanysets %>セット
+            </div>  
+
             <div class="image">
               <%= image_tag t.image_url if t.image? %>
             </div>
             
             <div>  
-              (♡<%= t.liked_users.count %>)
+              ♡<%= t.liked_users.count %>
             </div>
             
             <p class="time">
-              <%= t.created_at %>
+              <%= t.created_at.to_s(:datetime_jp) %>
             </p>
             
           </div>

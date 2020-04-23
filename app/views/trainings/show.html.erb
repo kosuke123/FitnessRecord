@@ -5,7 +5,7 @@
 
     <div class="training">
       <h3><%= @training.body %></h3>
-      <p><%= @training.created_at %></p>
+      <p><%= @training.created_at.to_s(:datetime_jp) %></p>
       <%= link_to "編集する", edit_training_path(@training.id), class: "link-to" %>
       <br><br>
       <h3>いいね件数: <%= @training.likes.count %></h3>

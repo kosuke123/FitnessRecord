@@ -1,21 +1,47 @@
-<%= stylesheet_link_tag 'kinds', :media => "all" %>
-<div class="k">
-  <div class="kinds-container">
+<%= stylesheet_link_tag 'trainings', :media => "all" %>
+
+<div class="tr">
+  <div class="trainings-container">
     <h1>部位ごとトレーニング記録一覧</h1>
-      <% @trainings.each do |t| %>
-        <div class="kind">
-          <div class= "main-box">
-            <%= t.user.username %>
-            <%= t.user.email %>
-            <%= t.body %>
-            <strong><p><%= t.body %></p></strong>
-            <strong><p><%= t.howmany %>回</p></strong>
-            <strong><p><%= t.howmanysets %>セット</p></strong>
-            <%= t.created_at %>
-            <%= image_tag t.image_url if t.image? %>
+        <% @trainings.each do |t| %>
+          <div class="training">
+            <div class="main-box">
+                <div class="left-container"> 
+                    <div class="image-name">
+                      <div class="image-top">  
+                        <%= image_tag t.user.image_url if t.user.image? %>
+                      </div>  
+                      <div class="name-top">
+                        <%= t.user.username %>
+                      </div>
+                    </div>
+                </div>
+                <div class="right-container">
+                  <%= link_to "詳細へ", training_path(t.id), class: "link-to" %>
+                  <%= link_to "編集する", edit_training_path(t.id), class: "link-to" %>
+                  <%= link_to "削除する", training_path(t.id), method: :delete, class: "link-to" %>
+                </div>
+            </div>
+
+            <div class="content">
+              <h2><%= t.body %></h2>
+              <%= t.howmany %>回
+              <%= t.howmanysets %>セット
+            </div>  
+
+            <div class="image">
+              <%= image_tag t.image_url if t.image? %>
+            </div>
+            
+            <div>  
+              ♡<%= t.liked_users.count %>
+            </div>
+            
+            <p class="time">
+              <%= t.created_at.to_s(:datetime_jp) %>
+            </p>
+            
           </div>
-        </div> 
-      <% end %>
-    </div>
+        <% end %>
   </div>
-</div>
+</div>  
