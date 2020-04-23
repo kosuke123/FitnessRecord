@@ -11,8 +11,8 @@
     font-family: 'Noto Sans JP', sans-serif;
   }
   header {
-    background-color: black;
-    background-image: url(unnamed.jpg);
+    background-color: #204495;
+    /* background-image: url(unnamed.jpg); */
     background-repeat: no-repeat;  
     background-position: 35% 10%;
     height: 100px;
@@ -27,9 +27,13 @@
     text-decoration: none; 
   }
   header h1 {
+    padding-top: 30px;
+    padding-left: 10px;
+    float: left;
     color: white;
     margin-left: 20px;
     font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
   }
   .header-list {
     display: flex;
@@ -37,7 +41,9 @@
     margin-left: 600px;
   }
   header ul {
+    float: left;
     display: flex;
+    padding-top: 60px;
     padding-left: 40px;
     padding-right: 20px;
   }
@@ -73,7 +79,7 @@
     font-family: 'Patua One', cursive;
   }
   .link-to {
-    color: rgb(241, 209, 26);
+    color: orange;
   }
   .link-to-content {
     color: white;
