@@ -26,16 +26,20 @@ h3 {
 }
 .topuga {
   display: flex;
+  position: absolute;
+  top: 67px;
 }
-.maipeeji {
-  padding-top: 90px;
-  // display: flex;
+.user {
+  padding-top: 110px;
+}
+.ba {
+  position: relative;
 }
 .image{
   img{
-  width: 80px;
-  height: 80px;
-  border-radius: 40%;
+  width: 90px;
+  height: 90px;
+  border-radius: 80%;
   box-shadow: 0 2px 6px #c1ced7;
   margin: 20px 0 10px;
   object-fit: cover;
@@ -44,36 +48,21 @@ h3 {
   object-fit: contain;
   max-width: 100%;
 }
-// .actions{
-//   background-color: #333;
-//   border: 2px solid #333;
-//   color: #fff;
-//   line-height: 50px;
-// }
-// .actions:hover {
-//   background-color: #fff;
-//   border-color: #59b1eb;
-//   color: #59b1eb;
-// }
-// .actions {
-//   position: relative;
-//   background-color: #1abc9c;
-//   border-radius: 4px;
-//   color: #fff;
-//   line-height: 52px;
-//   -webkit-transition: none;
-//   transition: none;
-//   box-shadow: 0 3px 0 #0e8c73;
-//   text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-// }
-// .actions:hover {
-//   background-color: #31c8aa;
-//   box-shadow: 0 3px 0 #23a188;
-// }
-// .actions:active {
-//   top: 3px;
-//   box-shadow: none;
-// }
+.banner{
+  img{
+  width: 760px;
+  height: 180px;
+  object-fit: cover;
+  }  
+  margin: 40px;
+  object-fit: contain;
+  max-width: 100%;
+}
+.topuga {
+  position: absolute;
+  padding-top: 10px;
+}
+
 .bts { 
   display: inline-block;
   padding: 0.5em 1em;
@@ -106,46 +95,12 @@ h3 {
   margin: 10px auto;
   padding-bottom: 150px;
 }
-// .actions {
-//   display: inline-block;
-//   width: 200px;
-//   height: 54px;
-//   text-align: center;
-//   text-decoration: none;
-//   line-height: 54px;
-//   outline: none;
-//   background-color: #333;
-//   color: #fff;
-// }
-// .actions:hover {
-//   background-color: #59b1eb;
-// }
-// .actions::before,
-// .actions::after {
-//   position: absolute;
-//   z-index: -1;
-//   display: block;
-//   content: '';
-// }
-// .actions,
-// .actions::before,
-// .actions::after {
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-//   -webkit-transition: all .3s;
-//   transition: all .3s;
-// }
-// .pro {
-//   padding: 0.5em 1em;
-//   margin: 2em 0;
-//   color: white;
-//   background: linear-gradient(90deg, rgba(204, 58, 58, 0), rgba(118, 180, 81, 0.6));
-// }
-// .pro p {
-//   margin: 0; 
-//   padding: 0;
-// }
+.edit {
+  position: relative;
+}
+.propro {
+  padding-top: 20px;
+}
 .pro {
   position: relative;
   margin: 2em 0 2em 40px;
@@ -153,6 +108,8 @@ h3 {
   background: #fff0c6;
   border-radius: 30px;
   color: black;
+  // padding-top: 20px;
+  // margin-top: 20px;
 }
 .pro p {
   margin: 0; 

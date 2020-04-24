@@ -14,8 +14,15 @@
       </div>
 
       <div class="field">
-      <%= f.label :ユーザーネーム %><br />
-      <%= f.text_field :username %>
+      <%= f.label :バナー画像 %>
+      <br>
+      <%= f.file_field :banner %>
+      </div>
+
+      <div class="field" >
+        <%= f.label :ユーザーネーム %><br />
+        <i class="fa fa-user fa-lg fa-fw" aria-hidden="true" ,id:'un' ></i>
+        <%= f.text_field :username , id:'un' %>
       </div>
 
       <div class="field">

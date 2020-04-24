@@ -3,23 +3,30 @@
 <div class="haikei">
   <div class="trainings-container">
     <h1>マイページ</h1>
-    <div class="topuga">
-      <div class="image">
-          <%= image_tag @user.image_url if @user.image? %>
+    <div class="ba">
+      <div class="banner">
+        <%= image_tag @user.banner_url if @user.banner? %> 
       </div>
 
-      <div class="maipeeji">
+      <div class="topuga">
+        <div class="image">
+          <%= image_tag @user.image_url if @user.image? %>
+        </div>
         <div class="user">
           <h2><%= @user.username %></h2>
         </div>
       </div>
+      
+    </div>
+    <div class="propro">
+      <div class="pro">
+        <p><%= @user.profile%></p>
+      </div>
+    </div>
+    <div class="edit">
+      <%= link_to "プロフィールを編集する",edit_user_registration_path, class: "link-to" %>
     </div>
 
-    <div class="pro">
-      <p><%= @user.profile%></p>
-    </div>
-    <%= link_to "プロフィールを編集する",edit_user_registration_path, class: "link-to" %>
-    
     <% if user_signed_in? %>
     <% if current_user.id != @user.id %>　
       <%= render 'follow_form', user: @user %>

@@ -11,6 +11,8 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.0]
 
       t.string :image
 
+      t.string :banner
+
       t.text :profile
 
 

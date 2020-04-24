@@ -18,6 +18,7 @@ class User < ApplicationRecord
   has_many :liked_trainings, through: :likes, source: :training
 
   mount_uploader :image, ImageUploader
+  mount_uploader :banner, ImageUploader
 
   validates :username, presence: true #追記
   validates :profile, length: { maximum: 200 } #追記
