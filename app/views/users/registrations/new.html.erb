@@ -8,25 +8,29 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :ユーザーネーム %><br />
-        <%= f.text_field :username %>
+        <i class="fa fa-user fa-lg fa-fw" ></i>
+        <%= f.label :ユーザーネーム %>
+        <%= f.text_field :username, autofocus: true, autocomplete: "email", class: "form-control" %>
       </div>  
 
       <div class="field">
-        <%= f.label :メールアドレス %><br />
+        <i class="fas fa-envelope"></i>
+        <%= f.label :メールアドレス %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
       </div>
 
       <div class="field">
+        <i class="fas fa-lock"></i>
         <%= f.label :パスワード %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %>文字以上)</em>
-        <% end %><br />
+        <% end %>
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="field">
-        <%= f.label :パスワード再入力 %><br />
+        <i class="fas fa-lock"></i>
+        <%= f.label :パスワード再入力 %>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
 
