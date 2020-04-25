@@ -7,8 +7,6 @@ class UsersController < ApplicationController
   def show
     @trainings = Training.where(user_id: params[:id])
     @user = User.find_by(id: params[:id])
-    # @user = current_user
-      
   end
 
   def following

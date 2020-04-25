@@ -50,6 +50,8 @@
   header li {
     list-style: none;
     margin-right: 40px;
+    font-family: 'Patua One', cursive;
+    font-family: 'Noto Sans JP', sans-serif;
   }
   footer {
     color: white;
@@ -68,7 +70,7 @@
   .flash {
     padding: 10px 0;
     color: white;
-    background: rgb(113, 66, 189);
+    background: orange;
     text-align: center;
     position: relative;
     /* top: 64px; */

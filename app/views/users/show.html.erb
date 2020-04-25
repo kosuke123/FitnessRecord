@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="edit">
-      <%= link_to "プロフィールを編集する",edit_user_registration_path, class: "link-to" %>
+        <%= link_to "プロフィールを編集する",edit_user_registration_path, class: "link-to" %>
     </div>
 
     <% if user_signed_in? %>
@@ -35,26 +35,44 @@
     　<%= render 'stats', user: @user %>
     <% end %>
     <% end %>
+
     <% @trainings.each do |t| %>
       <div class="training">
         <div class="main-box">
-          <div class="left-container">
-            <%= image_tag t.image_url if t.image? %> 
-            <strong><p><%= t.body %></p></strong>
-            <strong><p><%= t.howmany %>回</p></strong>
-            <strong><p><%= t.howmanysets %>セット</p></strong>
-            <%= t.created_at.to_s(:datetime_jp) %>
-          </div>  
-          <div class="image">
-            <%= image_tag t.image_url if t.image? %>
-          </div>  
-          <div class="right-container">
-            <%= link_to "詳細へ", training_path(t.id), class: "link-to" %>
-            <%= link_to "編集する", edit_training_path(t.id), class: "link-to" %>
-            <%= link_to "削除する", training_path(t.id), method: :delete, class: "link-to" %>
-          </div> 
+            <div class="left-container"> 
+                <div class="image-name">
+                  <div class="image-top">  
+                    <%= image_tag t.user.image_url if t.user.image? %>
+                  </div>  
+                  <div class="name-top">
+                    <%= t.user.username %>
+                  </div>
+                </div>
+            </div>
+            <div class="right-container">
+              <%= link_to "詳細へ", training_path(t.id), class: "link-to" %>
+              <%= link_to "編集する", edit_training_path(t.id), class: "link-to" %>
+              <%= link_to "削除する", training_path(t.id), method: :delete, class: "link-to" %>
+            </div>
         </div>
+
+        <div class="content">
+          <h2><%= t.body %></h2>
+          <%= t.howmany %>回
+          <%= t.howmanysets %>セット
+        </div>  
+
+        <div class="image-content">
+          <%= image_tag t.image_url if t.image? %>
+        </div>
+        
+        <div>  
+          ♡<%= t.liked_users.count %>
+        </div>
+        
+        <p class="time">
+          <%= t.created_at.to_s(:datetime_jp) %>
+        </p>
+        
       </div>
     <% end %>
-  </div>
-</div>
