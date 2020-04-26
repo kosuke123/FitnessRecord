@@ -2,14 +2,11 @@
 
 <div class="tra">
   <div class="tra-container">
-    <h1>新規Training</h1>
+    <h1>新規トレーニング投稿</h1>
     <%= form_for(@training, :url => { controller:'trainings', action:'create'}) do |f| %> 
-      
-      <h3>画像投稿ページ
       <div class="field">
-        <i class="fas fa-images"></i>
-        <%= f.label :image %>
-        <br>
+        <h2><i class="fas fa-images"></i>
+        <%= f.label :画像・動画 %></h2>
         <%= f.file_field :image %>
       </div>
       </h3>

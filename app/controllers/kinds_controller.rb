@@ -8,6 +8,5 @@ class KindsController < ApplicationController
 
   def show
     @trainings = Training.where(kind_id: params[:id])
-    #  = Training.where(user_id: params[:id])
   end
 end
