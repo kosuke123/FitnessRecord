@@ -64,7 +64,6 @@ gem 'dotenv-rails'
 gem "font-awesome-rails"
 gem "bootstrap-sass", '2.3.2'
 
-gem 'carrierwave'
 
 gem 'streamio-ffmpeg'
 
