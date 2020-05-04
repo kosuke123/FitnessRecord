@@ -74,3 +74,8 @@ end
 group :production do
   gem 'pg'
 end
+
+group :development, :test do
+  gem 'hirb'
+  gem 'hirb-unicode'
+end
