@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   end
 
   get 'users/_follow_form' => 'users#_follow_form'
+
+  get 'explanation/top' => 'explanation#top'
   
   get 'chart_sample/index' => 'chart_sample#index'
   get  'articles#index' => 'article#index'

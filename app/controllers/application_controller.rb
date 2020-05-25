@@ -15,14 +15,14 @@ class ApplicationController < ActionController::Base
     protected
   
     def configure_permitted_parameters
-      added_attrs = [ :email, :username, :password, :password_confirmation, :image, :profile, :banner]
+      added_attrs = [ :email, :username, :password, :password_confirmation, :image, :profile]
       devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
       devise_parameter_sanitizer.permit :account_update, keys: added_attrs
       devise_parameter_sanitizer.permit :sign_in, keys: added_attrs
       # サインアップ時にnameのストロングパラメータを追加
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
       # アカウント編集の時にnameとprofileのストロングパラメータを追加
-      devise_parameter_sanitizer.permit(:account_update, keys: [:username, :profile, :image, :banner])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:username, :profile, :image])
     end
 
     

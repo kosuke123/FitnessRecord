@@ -4,14 +4,10 @@
   <div class="tra-container">
     <h1>新規トレーニング投稿</h1>
     <%= form_for(@training, :url => { controller:'trainings', action:'create'}) do |f| %> 
-      <div class="field">
-        <h2><i class="fas fa-images"></i>
-        <%= f.label :画像・動画 %></h2>
-        <%= f.file_field :image %>
-      </div>
-      </h3>
 
       <div class="field">
+        <h2>トレーニング名</h2>
+        <%= f.text_field :body, :size => 50 %>
         <h2>トレーニング部位</h2>
         <%= f.select :kind_id, Kind.all.map{|k| [k.body, k.id]}, :prompt => '選択してください' %>
         <br>
@@ -20,8 +16,18 @@
         <h2>トレーニングセット数</h2>
         <%= f.text_field :howmanysets, :size => 11 %>セット
         <br>
-        <h2>トレーニング名</h2>
-        <%= f.text_field :body, :size => 50 %>
+        <div class="fld">
+          <div class="field">
+          <h2><i class="fas fa-images"></i>
+          <%= f.label :画像 %></h2>
+          <%= f.file_field :image %>
+          </div>
+          <div class="field">
+          <h2><i class="fas fa-images"></i>
+          <%= f.label :動画 %></h2>
+          <%= f.file_field :movie %>
+          </div>
+        </div>
         <br><br>
         <%= f.submit "記録する", class: "bts" %>
       </div>

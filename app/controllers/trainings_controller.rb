@@ -23,8 +23,7 @@ class TrainingsController < ApplicationController
       flash[:notice] = "Good Training!!"
 
     else
-      redirect_to :action => "new"
-
+      render("trainings/new")
     end
 
   end

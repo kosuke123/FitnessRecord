@@ -19,28 +19,29 @@
   <body>
     <header>
       <h1><font color="orange">F</font>itness<font color="orange"> R</font>ecord<font color="orange"><i class="fas fa-dumbbell"></i></font></h1>
-      <div class="header-list">
-        <ul>
-            <li><%= link_to "トップ", trainings_path %></li>
-            <li><%= link_to "新規投稿へ", new_training_path %></li>
-
-            <li><% if user_signed_in? %>
-              <%= link_to "マイページ", users_show_path(current_user.id) %>
-            <% end %></li>
-            
-            <li><%= link_to "トレーニング一覧", kinds_index_path %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %><li>
-        </ul>
-      </div>
+      <ul>
+        <li><%= link_to "FitnessRecorderとは?", explanation_top_path %></li>
+      </ul>
     </header>
     
-    <% if flash[:notice] %>
-      <div class="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-
+ 
     <main>
+      <div class="header-list">
+        <ul>
+            <% if user_signed_in? %>
+            <li><%= link_to "トップ", trainings_path %></li>
+            <li><%= link_to "新規投稿へ", new_training_path %></li>
+            <li><font color="orange"><i class="fas fa-user"></i></font></i> <%= link_to "マイページ", users_show_path(current_user.id) %></li>
+            <li><%= link_to "トレーニング一覧", kinds_index_path %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %><li>
+            <% end %>
+        </ul>
+      </div>
+      <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
       <%= yield %>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
