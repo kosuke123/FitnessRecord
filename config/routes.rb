@@ -27,8 +27,6 @@ Rails.application.routes.draw do
   get 'chart_sample/index' => 'chart_sample#index'
   get  'articles#index' => 'article#index'
 
-  # get 'users/practice' => 'users#practice'
-
   resources :users do
     member do
      get :following, :followers
